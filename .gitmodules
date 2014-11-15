@@ -1,0 +1,3 @@
+[submodule "lamp-switch/RF24"]
+	path = lamp-switch/RF24
+	url = https://github.com/maniacbug/RF24.git
