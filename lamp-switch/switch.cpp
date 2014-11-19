@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <unistd.h>
-#include <../RF24/RPi/RF24/RF24.h>
+#include <RF24/RPi/RF24/RF24.h>
 
 using namespace std;
 RF24 radio(RPI_V2_GPIO_P1_22, RPI_V2_GPIO_P1_15, BCM2835_SPI_SPEED_8MHZ);

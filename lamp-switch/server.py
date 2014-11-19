@@ -3,7 +3,7 @@ from flask import Flask, redirect, render_template
 
 
 app = Flask(__name__)
-PROJECT_HOME = '/home/pi/projects/home-automation/'
+PROJECT_HOME = '/home/pi/projects/home-automation/lamp-switch/'
 
 
 @app.route('/')
@@ -13,11 +13,11 @@ def main():
 
 @app.route('/on')
 def on():
-    call([PROJECT_HOME + 'remote', '-m', '1'])
+    call([PROJECT_HOME + 'switch', '-m', '1'])
     return redirect('/')
 
 
 @app.route('/off')
 def off():
-    call([PROJECT_HOME + 'remote', '-m', '0'])
+    call([PROJECT_HOME + 'switch', '-m', '0'])
     return redirect('/')
