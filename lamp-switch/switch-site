@@ -1,0 +1,11 @@
+server {
+    listen 80;
+    access_log /var/log/nginx/switch_access.log;
+    error_log /var/log/nginx/switch_error.log;
+    server_name localhost;
+
+    location / { 
+        uwsgi_pass  unix:///tmp/switch.sock;
+        include     uwsgi_params;
+    }
+}
